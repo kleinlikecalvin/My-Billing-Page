@@ -4,10 +4,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME ICONS -->
+    <script
+      src="https://kit.fontawesome.com/edc2ca84e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
     <title>My Billing</title>
   </head>
   <body>
+    <div class="main">
+      <header>
+        <div class="user">
+          <img src="" alt="User avatar" />
+          <p id="userName"></p>
+        </div>
+        <div class="search">
+          <input type="search" placeholder="Search" />
+          <button id="searchPage">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div>
+          <button id="notifications"><i class="fa-regular fa-bell"></i></button>
+          <!-- Ask Seyma what this icon is supposed to be/do -->
+          <a href=""><img src="" alt="Not sure what this is for" /></a>
+        </div>
+      </header>
+      <nav>
+        <!-- If this were a full website then the hrefs would point to the respective pages -->
+        <a href="#"><i class="fa-regular fa-house"></i>Home</a>
+        <a href="#"><i class="fa-regular fa-calendar"></i>Appointments</a>
+        <a href="#"><i class="fa-regular fa-message-dots"></i>Messages</a>
+        <a href="#"><i class="fa-regular fa-clipboard"></i>Forms</a>
+        <a href="#"><i class="fa-regular fa-receipt"></i>Billing</a>
+        <a href="#"><i class="fa-regular fa-gear"></i>Setting</a>
+        <a href="#"
+          ><i class="fa-regular fa-arrow-right-from-bracket"></i>Logout</a
+        >
+      </nav>
+      <section id="billing-info">
+        <h1>My Billing</h1>
+        <div class="bills-search">
+          <select name="bill-type" id="billType">
+            <option value="invoices">Invoices</option>
+          </select>
+          <button><i class="fa-solid fa-magnifying-glass"></button>
+          <button><i class="fa-regular fa-bars-filter"></i></button>
+        </div>
+        <table>
+          <!-- PAST DUE -->
+          <tr class="past-due-data">
+            <th scope="row">Past Due</th>
+          </tr>
+          <tr class="past-due-data">
+            <th scope="col">Invoice #</th>
+            <th scope="col">Sent</th>
+            <th scope="col">Due</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Actions</th>
+          </tr>
+          <tr class="past-due-data">
+            <td scope="col">14997</td>
+            <td scope="col">09/15/2021</td>
+            <td scope="col">10/15/2021</td>
+            <td scope="col">$75.00</td>
+            <td scope="col">
+              <a href="">View</a
+              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
+              ><a href=""><i class="fa-regular fa-print"></i></a>
+            </td>
+          </tr>
+          <!-- DUE -->
+          <tr class="due-data">
+            <th scope="row">Due</th>
+          </tr>
+          <tr class="due-data">
+            <th scope="col">Invoice #</th>
+            <th scope="col">Sent</th>
+            <th scope="col">Due</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Actions</th>
+          </tr>
+          <tr class="due-data">
+            <td scope="col">99817</td>
+            <td scope="col">10/01/2021</td>
+            <td scope="col">10/31/2021</td>
+            <td scope="col">$84.00</td>
+            <td scope="col">
+              <a href="">View</a
+              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
+              ><a href=""><i class="fa-regular fa-print"></i></a>
+            </td>
+          </tr>
+          <!-- PAID -->
+          <tr class="paid-data">
+            <th scope="row">Past Due</th>
+          </tr>
+          <tr class="paid-data">
+            <th scope="col">Invoice #</th>
+            <th scope="col">Sent</th>
+            <th scope="col">Due</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Actions</th>
+          </tr>
+          <tr class="paid-data">
+            <td scope="col">46278</td>
+            <td scope="col">10/01/2021</td>
+            <td scope="col">10/31/2021</td>
+            <td scope="col">$43.00</td>
+            <td scope="col">
+              <a href="">View</a
+              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
+              ><a href=""><i class="fa-regular fa-print"></i></a>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <footer>
+        <div class="company-logo-cont"><img src="" alt="company logo" /></div>
+        <div class="change-page-cont">
+          <p class="current-page">Page 1</p>
+          <button id="firstPage"><i class="fa-regular fa-angles-left"></i></button>
+          <button id="prevPage"><i class="fa-regular fa-angle-left"></i></button>
+          <button id="nextPage"><i class="fa-regular fa-angle-right"></i></button>
+          <button id="lastPage"><i class="fa-regular fa-angles-right"></i></button>
+          <p class="last-page">Page 4</p>
+        </div>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
