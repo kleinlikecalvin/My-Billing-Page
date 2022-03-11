@@ -1,0 +1,43 @@
+body {
+  --font: "Roboto", sans-serif;
+  font-family: var(--font);
+  font-size: 16px;
+}
+button {
+  padding: 10px;
+  max-height: 30px;
+}
+.main {
+  background-color: darksalmon;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: auto;
+}
+header {
+  display: flex;
+  background-color: aqua;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  grid-column: 1;
+  grid-row: 2;
+}
+#billing-info {
+  background-color: violet;
+  grid-column: 2 / span 3;
+  grid-row: 2;
+}
+footer {
+  display: flex;
+  background-color: lime;
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+.change-page-cont {
+  display: flex;
+}

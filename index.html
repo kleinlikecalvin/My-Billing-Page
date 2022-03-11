@@ -10,9 +10,12 @@
       crossorigin="anonymous"
     ></script>
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
     <title>My Billing</title>
@@ -21,8 +24,8 @@
     <div class="main">
       <header>
         <div class="user">
-          <img src="" alt="User avatar" />
-          <p id="userName"></p>
+          <i class="fa-solid fa-user"></i>
+          <p id="userName">User Name</p>
         </div>
         <div class="search">
           <input type="search" placeholder="Search" />
@@ -31,14 +34,14 @@
           </button>
         </div>
         <div>
-          <button id="notifications"><i class="fa-regular fa-bell"></i></button>
+          <button id="notifications"><i class="fa-solid fa-bell"></i></button>
           <!-- Ask Seyma what this icon is supposed to be/do -->
           <a href=""><img src="" alt="Not sure what this is for" /></a>
         </div>
       </header>
       <nav>
         <!-- If this were a full website then the hrefs would point to the respective pages -->
-        <a href="#"><i class="fa-regular fa-house"></i>Home</a>
+        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
         <a href="#"><i class="fa-regular fa-calendar"></i>Appointments</a>
         <a href="#"><i class="fa-regular fa-message-dots"></i>Messages</a>
         <a href="#"><i class="fa-regular fa-clipboard"></i>Forms</a>
@@ -54,7 +57,7 @@
           <select name="bill-type" id="billType">
             <option value="invoices">Invoices</option>
           </select>
-          <button><i class="fa-solid fa-magnifying-glass"></button>
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
           <button><i class="fa-regular fa-bars-filter"></i></button>
         </div>
         <table>
@@ -130,10 +133,18 @@
         <div class="company-logo-cont"><img src="" alt="company logo" /></div>
         <div class="change-page-cont">
           <p class="current-page">Page 1</p>
-          <button id="firstPage"><i class="fa-regular fa-angles-left"></i></button>
-          <button id="prevPage"><i class="fa-regular fa-angle-left"></i></button>
-          <button id="nextPage"><i class="fa-regular fa-angle-right"></i></button>
-          <button id="lastPage"><i class="fa-regular fa-angles-right"></i></button>
+          <button id="firstPage">
+            <i class="fa-regular fa-angles-left"></i>
+          </button>
+          <button id="prevPage">
+            <i class="fa-regular fa-angle-left"></i>
+          </button>
+          <button id="nextPage">
+            <i class="fa-regular fa-angle-right"></i>
+          </button>
+          <button id="lastPage">
+            <i class="fa-regular fa-angles-right"></i>
+          </button>
           <p class="last-page">Page 4</p>
         </div>
       </footer>
