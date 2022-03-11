@@ -1,43 +1,149 @@
 body {
   --font: "Roboto", sans-serif;
+  --darkColor: #0f2d46;
+  --mediumColor: #5e5c5f;
+  --lightColor: #bdbdbd;
+  --blueColor: #11525c;
+  --padding: 10px;
   font-family: var(--font);
   font-size: 16px;
+  color: var(--lightColor);
 }
 button {
   padding: 10px;
   max-height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 .main {
-  background-color: darksalmon;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
+  max-width: 1200px;
+  min-width: 875px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: var(--lightColor);
+  transition: 500ms;
+}
+a:hover {
+  color: var(--darkColor);
+  transition: 500ms;
+}
+.fa {
+  font-size: 6em;
 }
 header {
   display: flex;
-  background-color: aqua;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 6;
   grid-row: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 150px;
+  padding: var(--padding);
+}
+.user-avatar {
+  border-radius: 50%;
+  padding: 25px;
+  background-color: lightgray;
+}
+#username {
+  font-weight: 600;
+}
+.search {
+  display: flex;
+  min-width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.search input {
+  width: 80%;
+  padding: calc(var(--padding) / 1.5);
+  border-radius: 5px;
+  border: 1px solid var(--lightColor);
+}
+.notificationsCont {
+  display: flex;
+  align-items: center;
 }
 nav {
   display: flex;
   flex-direction: column;
-  background-color: yellow;
   grid-column: 1;
   grid-row: 2;
+  border-top: 1px solid var(--lightColor);
+  padding: var(--padding);
+}
+nav a {
+  padding: var(--padding) 0 var(--padding) 0;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover {
+  color: var(--darkColor);
+  border-bottom: 2px solid var(--darkColor);
 }
 #billing-info {
-  background-color: violet;
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 6;
   grid-row: 2;
+  padding-bottom: var(--padding);
+}
+#billing-info h1 {
+  color: var(--darkColor);
+}
+.bills-search {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-bottom: 2px solid var(--mediumColor);
+}
+.bills-search select {
+  border: none;
+  padding: calc(var(--padding) / 1.5);
+  padding-left: 0;
+}
+table {
+  width: 90%;
+  border-spacing: 0;
+}
+table th {
+  color: var(--mediumColor);
+  padding: var(--padding);
+}
+
+table td {
+  border-bottom: 1px solid var(--lightColor);
+  border-top: 1px solid var(--lightColor);
+}
+td {
+  text-align: center;
+  color: var(--darkColor);
+}
+td a {
+  color: var(--blueColor);
+  font-weight: 600;
+}
+.bill-type {
+  text-align: left;
+  border-bottom: 1px solid var(--lightColor);
 }
 footer {
   display: flex;
-  background-color: lime;
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 6;
   grid-row: 3;
+  justify-content: right;
+  align-items: center;
 }
 .change-page-cont {
   display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
 }
