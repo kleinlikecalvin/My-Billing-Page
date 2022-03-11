@@ -24,31 +24,54 @@
     <div class="main">
       <header>
         <div class="user">
-          <i class="fa-solid fa-user"></i>
-          <p id="userName">User Name</p>
+          <div class="user-avatar"><i class="fa fa-solid fa-user"></i></div>
+          <p id="username">User Name</p>
         </div>
         <div class="search">
           <input type="search" placeholder="Search" />
           <button id="searchPage">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa fa-regular fa-magnifying-glass"></i>
           </button>
         </div>
-        <div>
-          <button id="notifications"><i class="fa-solid fa-bell"></i></button>
+        <div class="notificationsCont">
+          <button id="notifications">
+            <i class="fa fa-solid fa-bell"></i>
+          </button>
           <!-- Ask Seyma what this icon is supposed to be/do -->
-          <a href=""><img src="" alt="Not sure what this is for" /></a>
+          <a href="#"
+            ><img src="images/weirdIcon.jpeg" alt="Not sure what this is for"
+          /></a>
         </div>
       </header>
       <nav>
         <!-- If this were a full website then the hrefs would point to the respective pages -->
-        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-        <a href="#"><i class="fa-regular fa-calendar"></i>Appointments</a>
-        <a href="#"><i class="fa-regular fa-message-dots"></i>Messages</a>
-        <a href="#"><i class="fa-regular fa-clipboard"></i>Forms</a>
-        <a href="#"><i class="fa-regular fa-receipt"></i>Billing</a>
-        <a href="#"><i class="fa-regular fa-gear"></i>Setting</a>
-        <a href="#"
-          ><i class="fa-regular fa-arrow-right-from-bracket"></i>Logout</a
+        <a href="#" class="navLink"
+          ><i class="fa fa-solid fa-magnifying-glass"></i>
+          <span class="navPage">Home</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-calendar"></i>
+          <span>Appointments</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-message-dots"></i>
+          <span class="navPage">Messages</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-clipboard"></i>
+          <span class="navPage">Forms</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-receipt"></i>
+          <span class="navPage">Billing</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-gear"></i>
+          <span class="navPage">Setting</span></a
+        >
+        <a href="#" class="navLink"
+          ><i class="fa fa-regular fa-arrow-right-from-bracket"></i
+          ><span class="navPage">Logout</span></a
         >
       </nav>
       <section id="billing-info">
@@ -57,13 +80,15 @@
           <select name="bill-type" id="billType">
             <option value="invoices">Invoices</option>
           </select>
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-          <button><i class="fa-regular fa-bars-filter"></i></button>
+          <div>
+            <button><i class="fa fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa fa-regular fa-bars-filter"></i></button>
+          </div>
         </div>
         <table>
           <!-- PAST DUE -->
           <tr class="past-due-data">
-            <th scope="row">Past Due</th>
+            <th scope="row" class="bill-type" id="maybe">Past Due</th>
           </tr>
           <tr class="past-due-data">
             <th scope="col">Invoice #</th>
@@ -79,13 +104,14 @@
             <td scope="col">$75.00</td>
             <td scope="col">
               <a href="">View</a
-              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
-              ><a href=""><i class="fa-regular fa-print"></i></a>
+              ><button>
+                <i class="fa fa-regular fa-arrow-down-to-bracket"></i></button
+              ><button><i class="fa fa-regular fa-print"></i></button>
             </td>
           </tr>
           <!-- DUE -->
           <tr class="due-data">
-            <th scope="row">Due</th>
+            <th scope="row" class="bill-type">Due</th>
           </tr>
           <tr class="due-data">
             <th scope="col">Invoice #</th>
@@ -101,13 +127,14 @@
             <td scope="col">$84.00</td>
             <td scope="col">
               <a href="">View</a
-              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
-              ><a href=""><i class="fa-regular fa-print"></i></a>
+              ><button>
+                <i class="fa fa-regular fa-arrow-down-to-bracket"></i></button
+              ><button><i class="fa fa-regular fa-print"></i></button>
             </td>
           </tr>
           <!-- PAID -->
           <tr class="paid-data">
-            <th scope="row">Past Due</th>
+            <th scope="row" class="bill-type">Paid</th>
           </tr>
           <tr class="paid-data">
             <th scope="col">Invoice #</th>
@@ -123,27 +150,27 @@
             <td scope="col">$43.00</td>
             <td scope="col">
               <a href="">View</a
-              ><a href=""><i class="fa-regular fa-arrow-down-to-bracket"></i></a
-              ><a href=""><i class="fa-regular fa-print"></i></a>
+              ><button>
+                <i class="fa fa-regular fa-arrow-down-to-bracket"></i></button
+              ><button><i class="fa fa-regular fa-print"></i></button>
             </td>
           </tr>
         </table>
       </section>
       <footer>
-        <div class="company-logo-cont"><img src="" alt="company logo" /></div>
         <div class="change-page-cont">
           <p class="current-page">Page 1</p>
           <button id="firstPage">
-            <i class="fa-regular fa-angles-left"></i>
+            <i class="fa fa-regular fa-angles-left"></i>
           </button>
           <button id="prevPage">
-            <i class="fa-regular fa-angle-left"></i>
+            <i class="fa fa-regular fa-angle-left"></i>
           </button>
           <button id="nextPage">
-            <i class="fa-regular fa-angle-right"></i>
+            <i class="fa fa-regular fa-angle-right"></i>
           </button>
           <button id="lastPage">
-            <i class="fa-regular fa-angles-right"></i>
+            <i class="fa fa-regular fa-angles-right"></i>
           </button>
           <p class="last-page">Page 4</p>
         </div>
