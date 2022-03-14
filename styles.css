@@ -33,9 +33,6 @@ a:hover {
   color: var(--darkColor);
   transition: 500ms;
 }
-.fa {
-  font-size: 6em;
-}
 header {
   display: flex;
   grid-column: 1 / span 6;
